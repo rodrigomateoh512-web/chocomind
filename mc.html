@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoMind | Dale un toque único chocolatoso</title>
+    <!-- Fuentes juveniles, modernas y legibles -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos modernos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vinculación con CSS -->
+    <link rel="stylesheet" href="mc.css">
+</head>
+<body>
+
+    <!-- BARRA DE MENÚ ROJO OSCURO PASTEL -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="brand">
+                <!-- ESPACIO DEDICADO PARA TU LOGO (Coloca tu archivo como logo.png) -->
+                <div class="logo-frame">
+                    <img src="IMG/LOGO.jpe" alt="Logo ChocoMind" class="nav-logo" onerror="this.src='https://placehold.co/100x100/FCE4EC/883948?text=Tu+Logo'">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">ChocoMind</span>
+                    <span class="brand-sub">Dale un toque único chocolatoso</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#propuesta">Propuesta</a>
+                <a href="#catalogo">Productos</a>
+                <a href="#como-pedir">¿Cómo pedir?</a>
+                <a href="#personaliza">Arma tu Pedido</a>
+                <a href="#contacto" class="btn-nav"><i class="fab fa-whatsapp"></i> Pedir Ya</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION CON COLORES PASTELES Y CARRUSEL -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-info">
+                <span class="badge"><i class="fas fa-star"></i> Creatividad, Fruta & Cacao</span>
+                <h1>Dale un toque <span class="highlight">ÚNICO</span> chocolatoso</h1>
+                <p class="hero-desc">
+                    En <strong>ChocoMind</strong> convertimos el chocolate de siempre en una explosión de sabor y creatividad. Creamos brochetas, accesorios comestibles y mini packs llenos de frutas frescas y chocotejas hechas a tu gusto.
+                </p>
+                <div class="hero-actions">
+                    <a href="#catalogo" class="btn-primary"><i class="fas fa-ice-cream"></i> Ver Productos</a>
+                    <a href="#personaliza" class="btn-secondary"><i class="fas fa-wand-magic-sparkles"></i> Crear Mi Diseño</a>
+                </div>
+            </div>
+
+            <!-- CARRUSEL INTERACTIVO -->
+            <div class="carousel-wrapper">
+                <div class="carousel" id="heroCarousel">
+                    <div class="slide active">
+                        <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=800&q=80" alt="Fresas y Chocolate">
+                        <div class="slide-caption">
+                            <h3>Frutas Frescas + Cacao</h3>
+                            <p>Combinaciones dulces, suaves y divertidas para compartir</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=800&q=80" alt="Chocotejas artesanales">
+                        <div class="slide-caption">
+                            <h3>Chocotejas con Rellenos Top</h3>
+                            <p>Manjar, Oreo, fresa, frutos secos y lo que tú elijas</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=800&q=80" alt="Mini envases para fiestas">
+                        <div class="slide-caption">
+                            <h3>Packs para Fiestas y Amigos</h3>
+                            <p>Envases personalizados listos para sorprender en cada ocasión</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPUESTA DE VALOR CON TARJETAS PASTELES MULTICOLOR -->
+    <section id="propuesta" class="value-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué hace especial a ChocoMind?</h2>
+                <p>Dulces divertidos, frescos y diseñados especialmente para niños, jóvenes y amantes del chocolate.</p>
+            </div>
+            <div class="value-cards">
+                <div class="v-card pastel-pink">
+                    <div class="icon-box"><i class="fas fa-palette"></i></div>
+                    <h3>100% Personalizable</h3>
+                    <p>Tú eliges el relleno de tus chocotejas, el tipo de chocolate, las frutas y el diseño de tu empaque.</p>
+                </div>
+                <div class="v-card pastel-mint">
+                    <div class="icon-box"><i class="fas fa-apple-whole"></i></div>
+                    <h3>Fruta & Cacao Fresco</h3>
+                    <p>Preparamos cada pedido al momento con ingredientes seleccionados para un sabor increíble.</p>
+                </div>
+                <div class="v-card pastel-lavender">
+                    <div class="icon-box"><i class="fas fa-face-laugh-beam"></i></div>
+                    <h3>Formatos Divertidos</h3>
+                    <p>Desde palitos tipo anticucho hasta collares comestibles y mini packs para fiestas o el cole.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO DE 3 PRODUCTOS -->
+    <section id="catalogo" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros 3 Productos Estrella</h2>
+                <p>Precios accesibles en Soles Peruanos (S/). ¡Elige tu favorito o combínalos!</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- PRODUCTO 1: PALOS DE ANTICUCHOS -->
+                <article class="product-card">
+                    <div class="product-badge badge-peach">¡El Favorito!</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?auto=format&fit=crop&w=600&q=80" alt="Brochetas Anticucho ChocoMind">
+                    </div>
+                    <div class="product-body">
+                        <h3>Trío "Anticucho ChocoMind"</h3>
+                        <p class="product-desc">
+                            <strong>3 palitos estilo anticucho</strong> cargados de mini chocotejas artesanales, fresas frescas, plátano y marshmallows bañados en chocolate con chispas de colores.
+                        </p>
+                        <div class="product-footer">
+                            <span class="price">S/ 12.00</span>
+                            <a href="#personaliza" onclick="seleccionarProducto('Trío Anticucho ChocoMind (S/ 12.00)')" class="btn-order">
+                                <i class="fas fa-wand-magic-sparkles"></i> Personalizar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUCTO 2: PACK DE 3 COLLARES -->
+                <article class="product-card">
+                    <div class="product-badge badge-mint">Pack x3 Collares</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Pack 3 Collares Choco-Chic">
+                    </div>
+                    <div class="product-body">
+                        <h3>Pack x3 Collares "Choco-Chic"</h3>
+                        <p class="product-desc">
+                            <strong>¡Lleva 3 collares comestibles!</strong> Tejidos con mini chocotejas, bombones frutales y gomitas bañadas en chocolate. Perfecto para compartir con tus mejores amigos.
+                        </p>
+                        <div class="product-footer">
+                            <span class="price">S/ 15.00</span>
+                            <a href="#personaliza" onclick="seleccionarProducto('Pack x3 Collares Choco-Chic (S/ 15.00)')" class="btn-order">
+                                <i class="fas fa-wand-magic-sparkles"></i> Personalizar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PRODUCTO 3: PAQUETE DE 6 ENVASES CIRCULARES CHIQUITOS -->
+                <article class="product-card">
+                    <div class="product-badge badge-lavender">Pack x6 Mini Envases</div>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80" alt="Mini Party Cups x6">
+                    </div>
+                    <div class="product-body">
+                        <h3>Mini Party Cups x6</h3>
+                        <p class="product-desc">
+                            <strong>Paquete de 6 envases circulares chiquitos</strong> con diseños personalizados para fiesta, llenos de chocotejas, trozos de fruta fresca y chocolates variados.
+                        </p>
+                        <div class="product-footer">
+                            <span class="price">S/ 28.00</span>
+                            <a href="#personaliza" onclick="seleccionarProducto('Mini Party Cups x6 (S/ 28.00)')" class="btn-order">
+                                <i class="fas fa-wand-magic-sparkles"></i> Personalizar
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: ¿CÓMO FUNCIONA TU PEDIDO? -->
+    <section id="como-pedir" class="steps-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Cómo hacer tu pedido en 3 pasos?</h2>
+                <p>Es súper rápido, fácil y 100% a tu estilo.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <span class="step-num">1</span>
+                    <h4>Elige tu Producto</h4>
+                    <p>Selecciona entre los anticuchos dulces, el pack de 3 collares o los 6 mini envases circulares.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">2</span>
+                    <h4>Combina Sabores</h4>
+                    <p>Escoge el relleno de tus chocotejas, tus frutas favoritas, el tipo de chocolate y tu diseño.</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">3</span>
+                    <h4>Envía por WhatsApp</h4>
+                    <p>Con un clic se genera tu pedido listo para enviárnoslo al <strong>989847458</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO INTERACTIVO DE PEDIDOS PERSONALIZADOS -->
+    <section id="personaliza" class="customizer-section">
+        <div class="container customizer-box">
+            <div class="customizer-header">
+                <span class="badge"><i class="fas fa-sliders"></i> Laboratorio ChocoMind</span>
+                <h2>Arma y Personaliza tu Pedido</h2>
+                <p>Selecciona tus opciones favoritas o escribe exactamente lo que deseas en los campos de texto.</p>
+            </div>
+
+            <form id="customForm" class="custom-form">
+                <!-- 1. PRODUCTO BASE -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-box-open"></i> 1. Elige tu producto:</label>
+                        <select id="productoSelect" onchange="toggleOtro('productoSelect', 'productoOtro')">
+                            <option value="Trío Anticucho ChocoMind (S/ 12.00)">Trío Anticucho ChocoMind (S/ 12.00)</option>
+                            <option value="Pack x3 Collares Choco-Chic (S/ 15.00)">Pack x3 Collares Choco-Chic (S/ 15.00)</option>
+                            <option value="Mini Party Cups x6 (S/ 28.00)">Mini Party Cups x6 - Envases Circulares (S/ 28.00)</option>
+                            <option value="Otro">Otro pedido especial (especificar)</option>
+                        </select>
+                        <input type="text" id="productoOtro" class="mt-8" placeholder="Escribe qué producto o cantidad deseas...">
+                    </div>
+
+                    <!-- 2. TIPO DE CHOCOLATE -->
+                    <div class="form-group">
+                        <label><i class="fas fa-cookie-bite"></i> 2. Tipo de chocolate:</label>
+                        <select id="chocolateSelect" onchange="toggleOtro('chocolateSelect', 'chocolateOtro')">
+                            <option value="Chocolate con Leche (Clásico)">Chocolate con Leche (Clásico)</option>
+                            <option value="Chocolate Bitter / Oscuro">Chocolate Bitter / Oscuro</option>
+                            <option value="Chocolate Blanco Pastel">Chocolate Blanco Pastel (Rosa/Celeste/Lila)</option>
+                            <option value="Mix de Chocolates">Mix de Chocolates</option>
+                            <option value="Otros">Otros (especificar)</option>
+                        </select>
+                        <input type="text" id="chocolateOtro" class="mt-8" placeholder="Escribe qué tipo de chocolate prefieres...">
+                    </div>
+                </div>
+
+                <!-- 3. RELLENO DE CHOCOTEJAS -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-heart"></i> 3. ¿Lleva chocotejas? Elige el relleno:</label>
+                        <select id="rellenoSelect" onchange="toggleOtro('rellenoSelect', 'rellenoOtro')">
+                            <option value="Manjar Blanco">Manjar Blanco</option>
+                            <option value="Fresa">Fresa</option>
+                            <option value="Oreo">Oreo</option>
+                            <option value="Frutos Secos (Pecanas/Pasas)">Frutos Secos (Pecanas / Pasas)</option>
+                            <option value="Surtido de todos">Surtido de todos los rellenos</option>
+                            <option value="Sin chocotejas">Sin chocotejas</option>
+                            <option value="Otros">Otros (especificar)</option>
+                        </select>
+                        <input type="text" id="rellenoOtro" class="mt-8" placeholder="Escribe otro relleno que te gustaría...">
+                    </div>
+
+                    <!-- 4. ELECCIÓN DE FRUTAS -->
+                    <div class="form-group">
+                        <label><i class="fas fa-lemon"></i> 4. Escoge tus frutas favoritas:</label>
+                        <select id="frutaSelect" onchange="toggleOtro('frutaSelect', 'frutaOtro')">
+                            <option value="Fresas frescas">Fresas frescas</option>
+                            <option value="Plátano en rodajas">Plátano en rodajas</option>
+                            <option value="Uvas / Arándanos">Uvas / Arándanos</option>
+                            <option value="Mix de Frutas (Fresa, plátano y uva)">Mix de Frutas (Fresa, plátano y uva)</option>
+                            <option value="Otros">Otros (especificar)</option>
+                        </select>
+                        <input type="text" id="frutaOtro" class="mt-8" placeholder="Escribe qué otra fruta deseas incluir...">
+                    </div>
+                </div>
+
+                <!-- 5. DISEÑO PERSONALIZADO Y DEDICATORIA / IMAGEN -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-palette"></i> 5. Diseño o temática personalizada:</label>
+                        <select id="disenoSelect" onchange="toggleOtro('disenoSelect', 'disenoOtro')">
+                            <option value="Diseño Estándar Pastel ChocoMind">Diseño Estándar Pastel ChocoMind</option>
+                            <option value="Temática Cumpleaños / Fiesta">Temática Cumpleaños / Fiesta</option>
+                            <option value="Diseño Colegial / Amistad">Diseño Colegial / Amistad</option>
+                            <option value="Diseño Personalizado Especial">Diseño Personalizado (describir abajo)</option>
+                        </select>
+                        <input type="text" id="disenoOtro" class="mt-8" placeholder="Describe los colores, personajes o temática del envase...">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-image"></i> 6. Dedicatoria, mensaje o imagen en etiqueta:</label>
+                        <select id="etiquetaTipo">
+                            <option value="Solo texto / dedicatoria">Solo texto / dedicatoria</option>
+                            <option value="Texto + Imagen o Sticker personalizado">Texto + Imagen o Sticker personalizado (enviaré foto por WhatsApp)</option>
+                            <option value="Sin etiqueta especial">Sin etiqueta especial</option>
+                        </select>
+                        <input type="text" id="dedicatoriaTexto" class="mt-8" placeholder="Escribe aquí tu mensaje o indica qué imagen deseas...">
+                    </div>
+                </div>
+
+                <button type="button" onclick="enviarPedidoChocoMind()" class="btn-primary full-width">
+                    <i class="fab fa-whatsapp"></i> Enviar Mi Pedido Personalizado a WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA CON CONTACTO E ICONOS -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo-wrap">
+                    <img src="IMG/LOGO.jpe" alt="Logo ChocoMind" class="footer-logo" onerror="this.src='https://placehold.co/100x100/FCE4EC/883948?text=Tu+Logo'">
+                </div>
+                <h3>ChocoMind</h3>
+                <p>Dale un toque único chocolatoso. Chocolates creativos, brochetas, collares y mini packs personalizados para hacer dulce cada momento.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contáctanos</h4>
+                <p><i class="fas fa-phone-alt"></i> WhatsApp / Llamadas: <strong>989847458</strong></p>
+                <p><i class="fas fa-school"></i> Entregas en colegios, fiestas y pedidos por encargo</p>
+                <p><i class="fas fa-heart"></i> Atención rápida y 100% personalizada</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Redes y Pedidos</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/51989847458" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="tel:989847458" aria-label="Teléfono"><i class="fas fa-phone"></i></a>
+                </div>
+                <a href="https://wa.me/51989847458" target="_blank" class="btn-footer-cta">
+                    <i class="fab fa-whatsapp"></i> Escribir al 989847458
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ChocoMind | <strong>Hecho por: Rodrigo Mateo Zegarra | 5to C</strong></p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT PARA CARRUSEL Y FORMULARIO DINÁMICO -->
+    <script>
+        // Carrusel automático y manual
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dotsContainer = document.getElementById('carouselDots');
+
+        slides.forEach((_, idx) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (idx === 0) dot.classList.add('active');
+            dot.onclick = () => goToSlide(idx);
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function moveSlide(step) {
+            goToSlide(currentSlide + step);
+        }
+
+        setInterval(() => moveSlide(1), 5000);
+
+        // Seleccionar producto directamente desde las tarjetas
+        function seleccionarProducto(nombreProducto) {
+            const select = document.getElementById('productoSelect');
+            select.value = nombreProducto;
+        }
+
+        // Resaltar campo de texto cuando elige "Otros"
+        function toggleOtro(selectId, inputId) {
+            const selectVal = document.getElementById(selectId).value;
+            const inputEl = document.getElementById(inputId);
+            if (selectVal.includes('Otro') || selectVal.includes('Especial')) {
+                inputEl.style.borderColor = '#883948';
+                inputEl.focus();
+            } else {
+                inputEl.style.borderColor = '#E6D5CC';
+            }
+        }
+
+        // Enviar pedido armado directo a WhatsApp (989847458)
+        function enviarPedidoChocoMind() {
+            const prod = document.getElementById('productoSelect').value;
+            const prodExtra = document.getElementById('productoOtro').value;
+
+            const choco = document.getElementById('chocolateSelect').value;
+            const chocoExtra = document.getElementById('chocolateOtro').value;
+
+            const relleno = document.getElementById('rellenoSelect').value;
+            const rellenoExtra = document.getElementById('rellenoOtro').value;
+
+            const fruta = document.getElementById('frutaSelect').value;
+            const frutaExtra = document.getElementById('frutaOtro').value;
+
+            const diseno = document.getElementById('disenoSelect').value;
+            const disenoExtra = document.getElementById('disenoOtro').value;
+
+            const etiqueta = document.getElementById('etiquetaTipo').value;
+            const dedicatoria = document.getElementById('dedicatoriaTexto').value;
+
+            const mensaje = `¡Hola *ChocoMind*! Quisiera hacer un pedido personalizado:%0A%0A` +
+                `🍫 *Producto:* ${prod} ${prodExtra ? '(' + prodExtra + ')' : ''}%0A` +
+                `✨ *Chocolate:* ${choco} ${chocoExtra ? '(' + chocoExtra + ')' : ''}%0A` +
+                `🤎 *Relleno Chocotejas:* ${relleno} ${rellenoExtra ? '(' + rellenoExtra + ')' : ''}%0A` +
+                `🍓 *Frutas:* ${fruta} ${frutaExtra ? '(' + frutaExtra + ')' : ''}%0A` +
+                `🎨 *Diseño:* ${diseno} ${disenoExtra ? '(' + disenoExtra + ')' : ''}%0A` +
+                `💌 *Etiqueta / Imagen:* ${etiqueta} ${dedicatoria ? '- "' + dedicatoria + '"' : ''}`;
+
+            window.open(`https://wa.me/51989847458?text=${mensaje}`, '_blank');
+        }
+    </script>
+</body>
+</html>
